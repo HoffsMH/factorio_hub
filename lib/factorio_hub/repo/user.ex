@@ -5,7 +5,7 @@ defmodule FactorioHub.Repo.User do
   @primary_key {:id, :binary_id, autogenerate: true}
 
   schema "user" do
-    field :name, :string
+    field(:name, :string)
 
     timestamps()
   end

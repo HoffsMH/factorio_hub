@@ -5,7 +5,7 @@ defmodule FactorioHub.Application do
 
   def start(_type, _args) do
     children = [
-      FactorioHub.Repo,
+      FactorioHub.Repo
     ]
 
     opts = [strategy: :one_for_one, name: FactorioHub.Supervisor]

@@ -1,18 +1,5 @@
-defmodule FactorioHub do
+defmodule FactorioHub.Core do
   @moduledoc """
-  Documentation for FactorioHub.
+  API for FactorioHub Core
   """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> FactorioHub.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end

@@ -26,9 +26,8 @@ defmodule Mix.Common do
       formatter: @formatter
     ]
   end
-  def project(name, deps, desc), do: project(name, deps, desc, [])
 
-  def project(name, deps, description, opts) do
+  def project(name, deps, description) do
     [
       app: name,
       version: version(),
@@ -37,8 +36,8 @@ defmodule Mix.Common do
       description: description,
       package: package(name),
       start_permanent: Mix.env() == :prod,
-      aliases: @aliases
-    ] ++ project_paths() ++ opts
+      aliases: @aliases,
+    ] ++ project_paths()
   end
 
   defp package(name) do

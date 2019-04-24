@@ -1,14 +1,14 @@
-defmodule FactorioHub.Application do
+defmodule FactorioHub.Core.Application do
   @moduledoc false
 
   use Application
 
   def start(_type, _args) do
     children = [
-      FactorioHub.Repo
+      FactorioHub.Core.Repo
     ]
 
-    opts = [strategy: :one_for_one, name: FactorioHub.Supervisor]
+    opts = [strategy: :one_for_one, name: FactorioHub.Core.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end

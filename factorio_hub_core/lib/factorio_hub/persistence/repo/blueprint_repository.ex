@@ -6,7 +6,7 @@ defmodule FactorioHub.Core.Repo.BlueprintRepository do
   @foreign_key_type :binary_id
 
   schema "blueprint_repository" do
-    belongs_to(:owner, FactorioHub.Repo.User)
+    belongs_to(:owner, FactorioHub.Core.Repo.User)
 
     timestamps()
   end

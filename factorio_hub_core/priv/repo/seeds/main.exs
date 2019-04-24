@@ -1,7 +1,7 @@
 # Create alot of users and attach blueprint repos to a portion of them
 
-alias FactorioHub.Repo
-alias FactorioHub.Repo.{User, BlueprintRepository}
+alias FactorioHub.Core.Repo
+alias FactorioHub.Core.Repo.{User, BlueprintRepository}
 alias Faker.{Name}
 for _ <- 1..100 do
     Enum.map(1..300, fn _->

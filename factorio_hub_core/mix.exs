@@ -10,12 +10,20 @@ defmodule FactorioHub.Core.MixProject do
   ]
 
   def project() do
+    [aliases: @aliases] ++
     Common.project(
       :factorio_hub_core,
       &deps/1,
-      "Core site functionality for FactorioHub",
-      aliases: @aliases
+      "Core site functionality for FactorioHub"
     )
+  end
+
+  def application() do
+    [
+      mod: {
+        FactorioHub.Core.Application, []
+      },
+    ]
   end
 
   def deps(_) do
@@ -25,6 +33,7 @@ defmodule FactorioHub.Core.MixProject do
         {:ecto},
         {:postgrex},
         {:ecto_sql},
+        {:faker},
         {:absinthe, only: [:test, :dev]}
       ]
     ]
